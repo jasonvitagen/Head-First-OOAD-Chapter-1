@@ -1,16 +1,18 @@
 package com.headfirstOOAD;
 
+import com.headfirstOOAD.enums.*;
+
 /**
  * Created by qishen.cheng on 27/8/2014.
  */
 public class Guitar {
     private String serialNumber;
     private double price;
-    private String builder;
+    private Builder builder;
     private String model;
-    private String type;
-    private String backWood;
-    private String topWood;
+    private GuitarType type;
+    private Wood backWood;
+    private Wood topWood;
 
     /**
      * Guitar constructor method
@@ -22,7 +24,7 @@ public class Guitar {
      * @param backWood
      * @param topWood
      */
-    public Guitar (String serialNumber, double price, String builder, String model, String type, String backWood, String topWood) {
+    public Guitar (String serialNumber, double price, Builder builder, String model, GuitarType type, Wood backWood, Wood topWood) {
         this.serialNumber = serialNumber;
         this.price = price;
         this.builder = builder;
@@ -38,19 +40,19 @@ public class Guitar {
     public double getPrice () {
         return price;
     }
-    public String getBuilder () {
+    public Builder getBuilder() {
         return builder;
     }
     public String getModel () {
         return model;
     }
-    public String getType () {
+    public GuitarType getType() {
         return type;
     }
-    public String getBackWood () {
+    public Wood getBackWood() {
         return backWood;
     }
-    public String getTopWood () {
+    public Wood getTopWood() {
         return topWood;
     }
 

@@ -1,5 +1,7 @@
 package com.headfirstOOAD;
 
+import com.headfirstOOAD.enums.*;
+
 import java.util.*;
 /**
  * Created by qishen.cheng on 27/8/2014.
@@ -25,10 +27,11 @@ public class Inventory {
         return null;
     }
 
-    public Guitar search (Guitar searchGuitar) {
+    public List search (Guitar searchGuitar) {
+        List matchingGuitars = new LinkedList();
         for (Iterator i = guitars.iterator(); i.hasNext();) {
             Guitar guitar = (Guitar) i.next();
-            String builder = searchGuitar.getBuilder();
+            Builder builder = searchGuitar.getBuilder();
             if ((builder != null) && (!builder.equals("")) && (!builder.equals(guitar.getBuilder()))) {
                 continue;
             }
@@ -36,21 +39,21 @@ public class Inventory {
             if ((model != null) && (!model.equals("")) && (!model.equals(guitar.getModel()))) {
                 continue;
             }
-            String type = searchGuitar.getType();
+            GuitarType type = searchGuitar.getType();
             if ((type != null) && (!type.equals("")) && (!type.equals(guitar.getType()))) {
                 continue;
             }
-            String backWood = searchGuitar.getBackWood();
+            Wood backWood = searchGuitar.getBackWood();
             if ((backWood != null) && (!backWood.equals("")) && (!backWood.equals(guitar.getBackWood()))) {
                 continue;
             }
-            String topWood = searchGuitar.getTopWood();
+            Wood topWood = searchGuitar.getTopWood();
             if ((topWood != null) && (!topWood.equals("")) && (!topWood.equals(guitar.getTopWood()))) {
                 continue;
             }
-            return guitar;
+            matchingGuitars.add(guitar);
         }
-        return null;
+        return matchingGuitars;
     }
 
 }
