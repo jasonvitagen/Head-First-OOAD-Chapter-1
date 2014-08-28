@@ -12,14 +12,16 @@ public class GuitarTester {
         initializeInventory(inventory);
 
         Guitar guitar = inventory.getGuitar("G1");
-        System.out.println(guitar.getSerialNumber() + " - " + guitar.getBuilder() + " - " + guitar.getModel() + " - " + guitar.getType() + " - " + guitar.getTopWood() + " - " + guitar.getBackWood());
+        GuitarSpec spec = guitar.getSpec();
+        System.out.println(guitar.getSerialNumber() + " - " + spec.getBuilder() + " - " + spec.getModel() + " - " + spec.getType() + " - " + spec.getTopWood() + " - " + spec.getBackWood());
 
-        Guitar searchGuitar = new Guitar("G5", 10.00, Builder.FENDER, "Malib CE", GuitarType.ACOUSTIC, Wood.KOA, Wood.KOA);
+        GuitarSpec searchGuitar = new GuitarSpec(Builder.FENDER, "Malib CE", GuitarType.ACOUSTIC, Wood.KOA, Wood.KOA);
         List matchingGuitars = inventory.search(searchGuitar);
         if (!matchingGuitars.isEmpty()) {
             for (Iterator i = matchingGuitars.iterator(); i.hasNext();) {
                 Guitar matchingGuitar = (Guitar) i.next();
-                System.out.println(matchingGuitar.getSerialNumber() + " - " + matchingGuitar.getBuilder() + " - " + matchingGuitar.getModel() + " - " + matchingGuitar.getType() + " - " + matchingGuitar.getTopWood() + " - " + matchingGuitar.getBackWood());
+                GuitarSpec guitarSpec = matchingGuitar.getSpec();
+                System.out.println(matchingGuitar.getSerialNumber() + " - " + guitarSpec.getBuilder() + " - " + guitarSpec.getModel() + " - " + guitarSpec.getType() + " - " + guitarSpec.getTopWood() + " - " + guitarSpec.getBackWood());
             }
         }
     }
