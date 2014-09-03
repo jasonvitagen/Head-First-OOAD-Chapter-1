@@ -27,16 +27,16 @@ public class GuitarTester {
     }
 
     public static void initializeInventory (Inventory inventory) {
-        Guitar g1 = new Guitar("G1", 10.00, Builder.FENDER, "MASTER DESIGNED TRADITIONAL DREADNOUGHT RF", GuitarType.ACOUSTIC, Wood.ALDER,  Wood.ALDER);
-        Guitar g2 = new Guitar("G2", 10.00, Builder.FENDER, "Eric Clapton Stratocaster", GuitarType.ELECTRIC,  Wood.REDWOOD,  Wood.REDWOOD);
-        Guitar g3 = new Guitar("G3", 10.00, Builder.FENDER, "Sonoran™ SCE Thinline", GuitarType.ACOUSTIC,  Wood.ASH,  Wood.ASH);
-        Guitar g4 = new Guitar("G4", 10.00, Builder.FENDER, "Jeff Beck Stratocaster", GuitarType.ELECTRIC,  Wood.BASSWOOD,  Wood.BASSWOOD);
-        Guitar g5 = new Guitar("G5", 10.00, Builder.FENDER, "Malib CE", GuitarType.ACOUSTIC,  Wood.KOA,  Wood.KOA);
-        Guitar g6 = new Guitar("G6", 10.00, Builder.FENDER, "Stevie Ray Vaughan Stratocaster", GuitarType.ELECTRIC,  Wood.MAHOGANY,  Wood.MAHOGANY);
-        Guitar g7 = new Guitar("G7", 10.00, Builder.FENDER, "Redondo CE", GuitarType.ACOUSTIC,  Wood.MAKORE,  Wood.MAKORE);
-        Guitar g8 = new Guitar("G8", 10.00, Builder.FENDER, "John Mayer Stratocaster", GuitarType.ELECTRIC,  Wood.MAPLE,  Wood.MAPLE);
-        Guitar g9 = new Guitar("G9", 10.00, Builder.FENDER, "Newporter Mini with Gig Bag", GuitarType.ACOUSTIC,  Wood.INDIAN_ROSEWOOD,  Wood.INDIAN_ROSEWOOD);
-        Guitar g10 = new Guitar("G10", 10.00, Builder.FENDER, "Buddy Guy Standard Stratocaster", GuitarType.ELECTRIC,  Wood.WALNUT,  Wood.WALNUT);
+        Guitar g1 = new Guitar("G1", 10.00, new GuitarSpec(Builder.FENDER,"MASTER DESIGNED TRADITIONAL DREADNOUGHT RF", GuitarType.ACOUSTIC, Wood.ALDER,  Wood.ALDER));
+        Guitar g2 = new Guitar("G2", 10.00, new GuitarSpec(Builder.FENDER,"Eric Clapton Stratocaster", GuitarType.ELECTRIC,  Wood.REDWOOD,  Wood.REDWOOD));
+        Guitar g3 = new Guitar("G3", 10.00, new GuitarSpec(Builder.FENDER,"Sonoran™ SCE Thinline", GuitarType.ACOUSTIC,  Wood.ASH,  Wood.ASH));
+        Guitar g4 = new Guitar("G4", 10.00, new GuitarSpec(Builder.FENDER,"Jeff Beck Stratocaster", GuitarType.ELECTRIC,  Wood.BASSWOOD,  Wood.BASSWOOD));
+        Guitar g5 = new Guitar("G5", 10.00, new GuitarSpec(Builder.FENDER,"Malib CE", GuitarType.ACOUSTIC,  Wood.KOA,  Wood.KOA));
+        Guitar g6 = new Guitar("G6", 10.00, new GuitarSpec(Builder.FENDER,"Stevie Ray Vaughan Stratocaster", GuitarType.ELECTRIC,  Wood.MAHOGANY,  Wood.MAHOGANY));
+        Guitar g7 = new Guitar("G7", 10.00, new GuitarSpec(Builder.FENDER,"Redondo CE", GuitarType.ACOUSTIC,  Wood.MAKORE,  Wood.MAKORE));
+        Guitar g8 = new Guitar("G8", 10.00, new GuitarSpec(Builder.FENDER,"John Mayer Stratocaster", GuitarType.ELECTRIC,  Wood.MAPLE,  Wood.MAPLE));
+        Guitar g9 = new Guitar("G9", 10.00, new GuitarSpec(Builder.FENDER,"Newporter Mini with Gig Bag", GuitarType.ACOUSTIC,  Wood.INDIAN_ROSEWOOD,  Wood.INDIAN_ROSEWOOD));
+        Guitar g10 = new Guitar("G10", 10.00, new GuitarSpec(Builder.FENDER,"Buddy Guy Standard Stratocaster", GuitarType.ELECTRIC,  Wood.WALNUT,  Wood.WALNUT));
 
         inventory.addGuitar(g1);
         inventory.addGuitar(g2);

@@ -36,4 +36,22 @@ public class GuitarSpec {
         return topWood;
     }
 
+    public boolean matches (GuitarSpec spec) {
+        if (builder != spec.builder) {
+            return false;
+        }
+        if ((model != null) && (!model.equals("")) && (!model.equals(spec.model))) {
+            return false;
+        }
+        if (type != spec.type) {
+            return false;
+        }
+        if (backWood != spec.backWood) {
+            return false;
+        }
+        if (topWood != spec.topWood) {
+            return false;
+        }
+        return true;
+    }
 }

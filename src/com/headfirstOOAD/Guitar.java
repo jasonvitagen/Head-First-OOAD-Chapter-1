@@ -15,10 +15,10 @@ public class Guitar {
      * @param serialNumber
      * @param price
      */
-    public Guitar (String serialNumber, double price, Builder builder, String model, GuitarType type, Wood backWood, Wood topWood) {
+    public Guitar (String serialNumber, double price, GuitarSpec spec) {
         this.serialNumber = serialNumber;
         this.price = price;
-        this.spec = new GuitarSpec(builder, model, type, backWood, topWood);
+        this.spec = spec;
     }
 
     public String getSerialNumber () {
